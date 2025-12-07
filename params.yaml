@@ -1,22 +1,20 @@
-data:
-raw_path: "E:/Diabetes-indicators-disease/data"
-processed_path: "data/processed"      # optional
-pattern: "*.csv"
 
-train:
-random_state: 42
-test_size: 0.2
-cv: 5
-model:
-n_estimators: [100]
-max_depth: [5, 8]
+paths:
+  raw_data: "result/diabetes_merged_clean.csv"
+  model: "result/model.pkl"
+  metrics: "result/metrics.json"
 
+features:
+  target: "Diabetes_binary"
 
-mlflow:
-experiment_name: "Diabetes-Indicators"
-run_name: "random_forest_run"
+training:
+  test_size: 0.2
+  random_state: 42
+  model_type: "random_forest"
 
+model_params:
+  n_estimators: 200
+  max_depth: 10
+  min_samples_split: 5
+  min_samples_leaf: 2
 
-preprocess:
-numerical_features: ["Age", "BMI", "PhysicalHealth", "MentalHealth", "SleepTime"]
-categorical_features: ["Sex", "Race", "Smoking", "AlcoholDrinking", "Stroke", "DiffWalking", "Diabeti_012", "PhysicalActivity", "GenHealth"]

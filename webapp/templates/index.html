@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .container { max-width: 600px; margin: auto; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        select, input { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px; width: 100%; background:#333; color:white; border:none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Diabetes Health Indicators – Full Prediction Form</h2>
+    <form action="/predict" method="POST">
+        <label>High BP</label><select name="HighBP" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>High Cholesterol</label><select name="HighChol" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Cholesterol Check</label><select name="CholCheck" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>BMI</label><input type="number" name="BMI" step="0.1" required>
+        <label>Smoker</label><select name="Smoker" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Stroke</label><select name="Stroke" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Heart Disease/Attack</label><select name="HeartDiseaseorAttack" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Physical Activity</label><select name="PhysActivity" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Fruits intake</label><select name="Fruits" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Vegetable intake</label><select name="Veggies" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Heavy Alcohol Consumption</label><select name="HvyAlcoholConsump" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Any Healthcare</label><select name="AnyHealthcare" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Could Not Visit Doctor due to Cost</label><select name="NoDocbcCost" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>General Health</label><select name="GenHlth" required><option value="Excellent">Excellent</option><option value="Very Good">Very Good</option><option value="Good">Good</option><option value="Fair">Fair</option><option value="Poor">Poor</option></select>
+        <label>Mental Health (days)</label><input type="number" name="MentHlth" min="0" max="30" required>
+        <label>Physical Health (days)</label><input type="number" name="PhysHlth" min="0" max="30" required>
+        <label>Difficulty Walking</label><select name="DiffWalk" required><option value="0">No</option><option value="1">Yes</option></select>
+        <label>Sex</label><select name="Sex" required><option value="Male">Male</option><option value="Female">Female</option></select>
+        <label>Age</label><select name="Age" required><option value="18-24">18-24</option><option value="25-29">25-29</option><option value="30-34">30-34</option><option value="35-39">35-39</option><option value="40-44">40-44</option><option value="45-49">45-49</option><option value="50-54">50-54</option><option value="55-59">55-59</option><option value="60-64">60-64</option><option value="65-69">65-69</option><option value="70-74">70-74</option><option value="75-79">75-79</option><option value="80+">80+</option></select>
+        <label>Education Level</label><select name="Education" required><option value="Never attended school">Never attended school</option><option value="Grade 1-8">Grade 1-8</option><option value="Some high school">Some high school</option><option value="High school graduate">High school graduate</option><option value="Some college">Some college</option><option value="College graduate">College graduate</option></select>
+        <label>Income</label><select name="Income" required><option value="<10k">&lt;10k</option><option value="10-15k">10-15k</option><option value="15-20k">15-20k</option><option value="20-25k">20-25k</option><option value="25-35k">25-35k</option><option value="35-50k">35-50k</option><option value="50-75k">50-75k</option><option value=">75k">&gt;75k</option></select>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+</body>
+</html>
