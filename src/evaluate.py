@@ -19,7 +19,7 @@ def evaluate_model():
     # Predictions
     preds = model.predict(X)
 
-    print("\n📌 Evaluation on full dataset:")
+    print("\n Evaluation on full dataset:")
     print(classification_report(y, preds))
 
 

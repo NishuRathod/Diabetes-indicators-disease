@@ -1,5 +1,3 @@
-# utils/mapper.py
-# utils/mapper.py
 def map_inputs(form: dict) -> list[float]:
     """Convert form data into numeric input list."""
     mapping = {
