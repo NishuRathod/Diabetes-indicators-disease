@@ -1,4 +1,4 @@
-🩺 Diabetes Health Indicators – ML Prediction Web App
+## 🩺 Diabetes Health Indicators – ML Prediction Web App
 
 This project is an end-to-end Machine Learning + Flask web application that predicts the likelihood of diabetes using the Diabetes Health Indicators dataset.
 It includes:
